@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'baseUrl' => '',
+    'baseUrl' => 'https://sbarry50.github.io/wp-headless-docs/',
     'production' => false,
-    'siteName' => 'Docs Starter Template',
-    'siteDescription' => 'Beautiful docs powered by Jigsaw',
+    'siteName' => 'WP Headless Docs',
+    'siteDescription' => 'Documentation site for crafting WP GraphQL supported WordPress plugins with the WP Headless library.',
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => '',
