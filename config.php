@@ -3,8 +3,8 @@
 return [
     'baseUrl' => 'https://sbarry50.github.io/wp-headless-docs/',
     'production' => false,
-    'siteName' => 'WP Headless Docs',
-    'siteDescription' => 'Documentation site for crafting WP GraphQL supported WordPress plugins with the WP Headless library.',
+    'siteName' => 'WP Headless Plugin Framework',
+    'siteDescription' => 'Craft WP GraphQL supported WordPress plugins with the WP Headless framework.',
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => '',
