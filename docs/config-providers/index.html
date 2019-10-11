@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Guide for the providers configuration file">
+
+        <meta property="og:site_name" content="WP Headless Plugin Framework"/>
+        <meta property="og:title" content="Providers | WP Headless Plugin Framework"/>
+        <meta property="og:description" content="Guide for the providers configuration file"/>
+        <meta property="og:url" content="https://my-jigsaw-docs.com/docs/config-providers"/>
+        <meta property="og:image" content="/assets/img/logo.png"/>
+        <meta property="og:type" content="website"/>
+
+        <meta name="twitter:image:alt" content="WP Headless Plugin Framework">
+        <meta name="twitter:card" content="summary_large_image">
+
+        
+        <title>WP Headless Plugin Framework | Providers</title>
+
+        <link rel="home" href="https://my-jigsaw-docs.com">
+        <link rel="icon" href="/favicon.ico">
+
+        
+                    <!-- Insert analytics code here -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=b36a6cbcd6112c720cb0">
+
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
+        <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
+            <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
+                <div class="flex items-center">
+                    <a href="/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
+
+                        <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0 pr-4">WP Headless Plugin Framework</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-1 justify-end items-center text-right md:pl-10">
+                                    </div>
+            </div>
+
+                <button class="flex justify-center items-center bg-blue border border-blue h-10 mr-4 px-5 rounded-full lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current text-white h-9 w-4" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current text-white h-9 w-4" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </header>
+
+        <main role="main" class="w-full flex flex-auto">
+            <section class="container max-w-4xl mx-auto px-6 md:px-8 py-4">
+    <div class="flex flex-col lg:flex-row">
+        <nav id="js-nav-menu" class="nav-menu hidden lg:block">
+            <ul class="list-reset my-0">
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/getting-started"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            Getting Started
+        </a>
+    
+            
+        <ul class="list-reset my-0">
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/installation"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Installation
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/setup"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Setup
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/application-container"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            The Application Container
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/events"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            Event Manager
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/view-templates"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            View Templates
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/configuration-files"
+            class="lvl0 lvl0-active  nav-menu__item hover:text-blue"
+        >
+            Configuration
+        </a>
+    
+            
+        <ul class="list-reset my-0">
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-providers"
+            class="lvl1  active font-semibold text-blue nav-menu__item hover:text-blue"
+        >
+            Providers
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-enqueue"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Enqueue
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-callbacks"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Callbacks
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-menus"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Menus
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-submenus"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Submenus
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-sections"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Sections
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-settings"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Settings
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-post-types"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Custom Post Types
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-taxonomies"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Custom Taxonomies
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-meta-boxes"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Meta Boxes
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-meta-fields"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Meta Fields
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-field-parameters"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Field Parameters
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-graphql-parameters"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            GraphQL Parameters
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/config-graphql-types"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            GraphQL Types
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/graphql"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            GraphQL
+        </a>
+    
+            
+        <ul class="list-reset my-0">
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/graphql-custom-types"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Custom Types
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/graphql-resolvers"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Resolvers
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/graphql-config-parameters"
+            class="lvl1   nav-menu__item hover:text-blue"
+        >
+            Configuration Parameters
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/vue"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            Vue.js Integration
+        </a>
+    
+    </li>
+            <li class="list-reset pl-4">
+            
+        <a href="/docs/helper-functions"
+            class="lvl0   nav-menu__item hover:text-blue"
+        >
+            Helper Functions
+        </a>
+    
+    </li>
+    </ul>
+        </nav>
+
+        <div class="w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
+            <h2>Providers</h2>
+<p>WP Headless uses the providers configuration file to instantiate its various classes with their respective dependencies. It also determines the order it creates the objects in.</p>
+<h3>Format</h3>
+<pre><code class="language-php">    'collection-id' =&gt; [
+        'container-id' =&gt; [
+            'class'  =&gt; SB2Media\Headless\Example\Example::class,
+            'app'    =&gt; true,
+            'config' =&gt; [
+                'config-id'
+            ],
+            'dependencies' =&gt; [
+                'dependency-container-id'
+            ],
+            'params' =&gt; [
+                'param_1',
+                'param_2',
+                'param_3',
+            ]
+        ],
+    ],</code></pre>
+<p>The providers array is seperated into collections. Each collection can contain multiple objects and can be queried using the <code>getCollection()</code> container method to get an array of container ID's in the collection.</p>
+<pre><code class="language-php">    $collection = app()-&gt;getCollection('collection-id');
+
+    var_dump($collection); // ['container-id-1', 'container-id-2', 'container-id-3']</code></pre>
+<p>The only required parameter is <code>class</code>. The other parameters do not need to be included if your class had no dependencies.</p>
+<p>The class parameter must be paired with the qualified namespace and class name with the double colon class syntax.</p>
+<pre><code class="language-php">    'class' =&gt; Name\Space\Classname::class</code></pre>
+<h4>Parameters</h4>
+<p>Dependencies are broken out into four different categories and must be defined in this order:</p>
+<ol>
+<li><code>app</code> - boolean - Application container flag</li>
+<li><code>config</code> - array - Configuration array(s)</li>
+<li><code>dependencies</code> - array - Class dependencies</li>
+<li><code>params</code> - array - Other parameter(s)</li>
+</ol>
+<p>You may define multuple configs, object dependencies and parameters. Your constructor parameters however must follow this order as well if you write any additional classes for your plugin.</p>
+<pre><code class="language-php">class Example
+{
+    public function __construct(Plugin $app, array $example_config, ClassOne $object_one, ClassTwo $object_two, $param)
+    {
+        // constructor code
+    }
+}</code></pre>
+<pre><code class="language-php">    'example-collection' =&gt; [
+        'example' =&gt; [
+            'class'  =&gt; SB2Media\Headless\Example\Example::class,
+            'app'    =&gt; true,
+            'config' =&gt; [
+                'example-config'
+            ],
+            'dependencies' =&gt; [
+                'object-one',
+                'object-two',
+            ],
+            'params' =&gt; [
+                'param'
+            ]
+        ],
+    ],</code></pre>
+<h5>The Application Container</h5>
+<p>Many of the classes in the WP Headless library utilize the application container. The container can be passed to any class in your plugin by setting the <code>app</code> flag in the provider config.</p>
+<pre><code class="language-php">    'example' =&gt; [
+        'class' =&gt; SB2Media\Headless\Example\Example::class,
+        'app' =&gt; true
+    ],</code></pre>
+<pre><code class="language-php">class Example {
+    public function __construct(Plugin $app)
+    {
+        $this-&gt;app = $app;
+    }
+}</code></pre>
+<p>However, in many cases you may find that it is simpler to just use the <code>app()</code> helper function and avoid dependency injection altogether.</p>
+<h5>Config</h5>
+<p>WP Headless autoloads all of the configuration files into a <code>Config</code> object after it creates the <code>Plugin</code> container. The config ID for each file will simply be each file's basename sans its .php extension.</p>
+<p>For example, if your class accepts the meta field config and the config file is <code>meta-fields.php</code>, it's config ID will simply be <code>meta-fields</code>.</p>
+<pre><code class="language-php">    'example' =&gt; [
+        'class' =&gt; SB2Media\Headless\Example\Example::class,
+        'config' =&gt; [
+            'meta-fields'
+        ]
+    ],</code></pre>
+<pre><code class="language-php">class Example {
+    public function __construct(array $config)
+    {
+        $this-&gt;config = $config;
+    }
+}</code></pre>
+<h5>Class Dependencies</h5>
+<p>Any class dependencies can be defined by simply including the dependency's container ID in the <code>dependencies</code> array.</p>
+<pre><code class="language-php">    'other' =&gt; [
+        'class' =&gt; SB2Media\Headless\Other\OtherClass::class,
+    ],
+    'example' =&gt; [
+        'class' =&gt; SB2Media\Headless\Example\Example::class,
+        'dependencies' =&gt; [
+            'other'
+        ]
+    ],</code></pre>
+<pre><code class="language-php">class Example {
+    public function __construct(OtherClass $object)
+    {
+        $this-&gt;object = $object;
+    }
+}</code></pre>
+<h5>Additional Parameters</h5>
+<p>Any additional parameters can be defined in the <code>parameters</code> array.</p>
+<pre><code class="language-php">class Example {
+    public function __construct(array $params, string $other_param)
+    {
+        $this-&gt;params = $params;
+        $this-&gt;other_param = $other_param;
+    }
+}</code></pre>
+<pre><code class="language-php">    'example' =&gt; [
+        'class' =&gt; SB2Media\Headless\Example\Example::class,
+        'params' =&gt; [
+            [
+                'key1' =&gt; 'value1',
+                'key2' =&gt; 'value2',
+                'key3' =&gt; 'value3',
+            ],
+            'other_param_value'
+        ]
+    ],</code></pre>
+<h3>Base Collection</h3>
+<p>The first section of objects created are from WP Headless' base classes. These should be left alone with the exception of the <code>Compatibility</code> class.</p>
+<p>The <code>Compatibility</code> class accepts an optional plugin dependency array parameter. By default, the WP Headless starter plugin requires WP GraphQL to be activated before you can activate and run the starter.</p>
+<pre><code class="language-php">    'compatibility' =&gt; [
+        'class' =&gt; SB2Media\Headless\Setup\Compatibility::class,
+        'app' =&gt; true,
+        'params' =&gt; [
+            'plugin_dependencies' =&gt; [
+                [
+                    'name' =&gt; 'WP GraphQL',
+                    'path' =&gt; 'wp-graphql/wp-graphql.php',
+                    'src' =&gt; 'https://docs.wpgraphql.com/getting-started/install-and-activate',
+                ],
+            ]
+        ]
+    ],</code></pre>
+<p>You may remove the WP GraphQL dependency if you wish to use WP Headless without GraphQL. You may also add any other plugin dependencies here. Please note the <code>path</code> parameter is the relative path from the WordPress <code>plugins</code> folder to the plugin's root file.</p>
+<h3>WordPress Collection</h3>
+<p>WordPress' various API's are found in this collection. These classes abstract away WordPress' API's and accept their respective config files.</p>
+<pre><code class="language-php">    'custom-post-types' =&gt; [
+        'class'  =&gt; SB2Media\Headless\WordPress\CustomPostTypes::class,
+        'app' =&gt; true,
+        'config' =&gt; [
+            'post-types'
+        ]
+    ],</code></pre>
+<p>These do not need to be modified from their default state, however you may wish to remove or comment out any API's you are not using so they won't be loaded.</p>
+<h3>GraphQL Collection</h3>
+<p>The base GraphQL classes are found in this collection. These do not need to be modified from their default state, however they may be removed or commented out if your plugin does not need GraphQL support or there is a component you do not need.</p>
+<pre><code class="language-php">'graphql' =&gt; [
+        'graphql-types' =&gt; [
+            'class'  =&gt; SB2Media\Headless\GraphQL\Types::class,
+            'app' =&gt; true,
+            'config' =&gt; [
+                'graphql-types',
+            ],
+        ],
+        'graphql-settings' =&gt; [
+            'class'  =&gt; SB2Media\Headless\GraphQL\Settings::class,
+            'app' =&gt; true,
+            'config' =&gt; [
+                'settings',
+            ],
+        ],
+        'graphql-meta-fields' =&gt; [
+            'class'  =&gt; SB2Media\Headless\GraphQL\MetaFields::class,
+            'app' =&gt; true,
+            'config' =&gt; [
+                'meta-fields',
+            ],
+        ],
+        'media-details-graphql' =&gt; [
+            'class' =&gt; SB2Media\Headless\Media\MediaDetailsGraphQL::class,
+        ],
+    ],</code></pre>
+<h3>Extension Collection</h3>
+<p>This is the section in the starter plugin where we recommend you define any classes specific to your plugin. You may also rename this collection or add additional collections depending on the complexity and needs of your plugin.</p>
+<pre><code class="language-php">    'extension' =&gt; [
+        'movie-details-graphql' =&gt; [
+            'class' =&gt; SB2Media\MovieDemo\Movies\MovieDetailsGraphQL::class,
+        ],
+    ],</code></pre>        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="/assets/build/js/main.js?id=7606b4544310fae989c8"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+
+        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center list-reset">
+                <li class="md:mr-2">
+                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> 2019.
+                </li>
+
+                <li>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
