@@ -34,7 +34,7 @@
         <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
             <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
-                    <a href="/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
+                    <a href="/wp-headless-docs/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
 
                         <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0 pr-4">WP Headless Plugin Framework</h1>
                     </a>
@@ -332,7 +332,7 @@
 <li><code>$post_id</code> - The WP post unique identifier (optional)</li>
 </ul>
 <p>The resolve method should return the values of the fields in the custom GraphQL type.</p>
-<p>Also don't forget to register these objects in the <a href="/docs/config-providers">providers config</a>.</p>
+<p>Also don't forget to register these objects in the <a href="/wp-headless-docs/docs/config-providers">providers config</a>.</p>
 <h3>Movie Demo Examples</h3>
 <p>We can use the Movie Demo plugin's resolvers as an example.</p>
 <p>The <code>MovieRatings</code> enum type's resolver is very simple. It merely returns the value of the <code>movie_rating</code> meta field for the relevant WP post ID that is being passed into the resolve method.</p>
@@ -356,7 +356,7 @@ class MovieRatingsGraphQL implements GraphQLResolverContract
         return $value;
     }
 }</code></pre>
-<p>Resolving the <code>MovieDetails</code> object type is a little more involved however. It requires we retrieve the values for the title, rating, year, actors and posters fields and pass them to the closure set to each's <code>resolve</code> parameter in the <a href="/docs/graphql-custom-types#movie-details-type-config">type configuration</a>. We can achieve this by assigning these values to an array and returning them in the resolver.</p>
+<p>Resolving the <code>MovieDetails</code> object type is a little more involved however. It requires we retrieve the values for the title, rating, year, actors and posters fields and pass them to the closure set to each's <code>resolve</code> parameter in the <a href="/wp-headless-docs/docs/graphql-custom-types#movie-details-type-config">type configuration</a>. We can achieve this by assigning these values to an array and returning them in the resolver.</p>
 <pre><code class="language-php">namespace SB2Media\MovieDemo\Movies;
 
 use SB2Media\Headless\Contracts\GraphQLResolverContract;

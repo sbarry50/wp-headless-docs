@@ -34,7 +34,7 @@
         <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
             <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
-                    <a href="/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
+                    <a href="/wp-headless-docs/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
 
                         <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0 pr-4">WP Headless Plugin Framework</h1>
                     </a>
@@ -324,7 +324,7 @@
 
         <div class="w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
             <h2>Submenus</h2>
-<p>Much like <a href="/docs/config-menus">top-level menus</a>, WP Headless allows you to easily add submenus via the <code>submenus.php</code> configuration file.</p>
+<p>Much like <a href="/wp-headless-docs/docs/config-menus">top-level menus</a>, WP Headless allows you to easily add submenus via the <code>submenus.php</code> configuration file.</p>
 <p>Submenu config entries accept the same parameters as the WordPress function <a href="https://developer.wordpress.org/reference/functions/add_submenu_page/">add_submenu_page()</a>.</p>
 <pre><code class="language-php">    [
         'parent_slug'  =&gt; 'movie-settings',
@@ -337,7 +337,7 @@
     ],</code></pre>
 <p>WP Headless is packaged with a base <code>menu-page.php</code> view template for displaying submenu pages which is set as the <code>callback</code> in the example above. You may modify that file or add your own if you wish.</p>
 <h3>Callbacks</h3>
-<p>While setting the <code>callback</code> parameter to the name of the view template should suffice in most cases here, we recommend you read the <a href="/docs/config-callbacks">callback section</a> for clarification on setting the <code>callback</code> parameter for more complex cases.</p>
+<p>While setting the <code>callback</code> parameter to the name of the view template should suffice in most cases here, we recommend you read the <a href="/wp-headless-docs/docs/config-callbacks">callback section</a> for clarification on setting the <code>callback</code> parameter for more complex cases.</p>
 <h3>Default Top-Level WordPress Menu Submenus</h3>
 <p>If you wish to add a submenu to a default top-level WordPress menu page, you can simply set the <code>parent_slug</code> parameter to the name of the menu (case sensitive).</p>
 <pre><code class="language-php">
@@ -359,7 +359,7 @@
 <pre><code class="language-php">    'args' =&gt; [
         'vue_id' =&gt; 'app'
     ],</code></pre>
-<p>Note you will also need to <a href="/docs/config-enqueue">enqueue</a> the applicable javascript files for the submenu page.</p>        </div>
+<p>Note you will also need to <a href="/wp-headless-docs/docs/config-enqueue">enqueue</a> the applicable javascript files for the submenu page.</p>        </div>
     </div>
 </section>
         </main>

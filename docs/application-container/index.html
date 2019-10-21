@@ -34,7 +34,7 @@
         <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
             <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
-                    <a href="/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
+                    <a href="/wp-headless-docs/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
 
                         <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0 pr-4">WP Headless Plugin Framework</h1>
                     </a>
@@ -331,7 +331,7 @@
 <p>The application container can be easily accessed using the <code>app()</code> helper function.</p>
 <p>Objects can be instantiated using the container's <code>set()</code> method.</p>
 <pre><code class="language-php">    app()-&gt;set('movies', new Movies());</code></pre>
-<p>However, in cases where you only need one instance of an object we recommend registering them in the <a href="/docs/config-providers">providers config</a>.</p>
+<p>However, in cases where you only need one instance of an object we recommend registering them in the <a href="/wp-headless-docs/docs/config-providers">providers config</a>.</p>
 <pre><code class="language-php">    'movies' =&gt; [
         'class' =&gt; SB2Media\MovieDemo\Movies\Movies::class,
     ],</code></pre>

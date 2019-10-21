@@ -34,7 +34,7 @@
         <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
             <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
-                    <a href="/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
+                    <a href="/wp-headless-docs/" title="WP Headless Plugin Framework home" class="inline-flex items-center">
 
                         <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0 pr-4">WP Headless Plugin Framework</h1>
                     </a>
@@ -326,7 +326,7 @@
             <h2>Field Parameters</h2>
 <p>WP Headless is packaged with a variety of input fields to use out of the box by simply setting the custom settings and/or meta fields <code>callback</code> parameter to the name of the view template file.</p>
 <p>Each of these templates however require various pieces of data to properly display. The most basic templates such as a standard text input field do not require any additional arguments beyond the <code>id</code> while fields like a select box will require an array of options.</p>
-<p>Both <a href="/docs/config-settings">settings</a> and <a href="/docs/config-meta-fields">meta fields</a> configuration file entries include an <code>args</code> array parameter where you can set any additional arguments a particular field may require.</p>
+<p>Both <a href="/wp-headless-docs/docs/config-settings">settings</a> and <a href="/wp-headless-docs/docs/config-meta-fields">meta fields</a> configuration file entries include an <code>args</code> array parameter where you can set any additional arguments a particular field may require.</p>
 <p>Let's run down each of the parameters and go over which templates they apply to.</p>
 <h3>Shared Parameters</h3>
 <p>These parameters are shared across many of the view templates.</p>
@@ -464,7 +464,7 @@ function us_states()
 <h3>Custom View Templates &amp; Parameters</h3>
 <p>You may create your own custom field view templates for settings and meta fields if your plugin requires functionality more complex than the pre-packaged fields can provide.</p>
 <p>The full config entry array is passed on to the templates in an <code>$args</code> variable so any additional arguments your templates require may either be added to the <code>args</code> array or included as a primary parameter in the configuration.</p>
-<p>If you have views that require data to be processed before it is sent to the template you can accomplish that with <a href="/docs/config-callbacks">custom callbacks</a>.</p>        </div>
+<p>If you have views that require data to be processed before it is sent to the template you can accomplish that with <a href="/wp-headless-docs/docs/config-callbacks">custom callbacks</a>.</p>        </div>
     </div>
 </section>
         </main>
