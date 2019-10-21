@@ -449,21 +449,21 @@
     ],</code></pre>
 <h3>Base Collection</h3>
 <p>The first section of objects created are from WP Headless' base classes. These should be left alone with the exception of the <code>Compatibility</code> class.</p>
-<p>The <code>Compatibility</code> class accepts an optional plugin dependency array parameter. By default, the WP Headless starter plugin requires WP GraphQL to be activated before you can activate and run the starter.</p>
+<p>The <code>Compatibility</code> class accepts an optional plugin dependency array parameter. By default, the WP Headless starter plugin requires WPGraphQL to be activated before you can activate and run the starter.</p>
 <pre><code class="language-php">    'compatibility' =&gt; [
         'class' =&gt; SB2Media\Headless\Setup\Compatibility::class,
         'app' =&gt; true,
         'params' =&gt; [
             'plugin_dependencies' =&gt; [
                 [
-                    'name' =&gt; 'WP GraphQL',
+                    'name' =&gt; 'WPGraphQL',
                     'path' =&gt; 'wp-graphql/wp-graphql.php',
                     'src' =&gt; 'https://docs.wpgraphql.com/getting-started/install-and-activate',
                 ],
             ]
         ]
     ],</code></pre>
-<p>You may remove the WP GraphQL dependency if you wish to use WP Headless without GraphQL. You may also add any other plugin dependencies here. Please note the <code>path</code> parameter is the relative path from the WordPress <code>plugins</code> folder to the plugin's root file.</p>
+<p>You may remove the WPGraphQL dependency if you wish to use WP Headless without GraphQL. You may also add any other plugin dependencies here. Please note the <code>path</code> parameter is the relative path from the WordPress <code>plugins</code> folder to the plugin's root file.</p>
 <h3>WordPress Collection</h3>
 <p>WordPress' various API's are found in this collection. These classes abstract away WordPress' API's and accept their respective config files.</p>
 <pre><code class="language-php">    'custom-post-types' =&gt; [

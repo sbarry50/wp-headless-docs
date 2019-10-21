@@ -332,18 +332,18 @@
 <li>Float</li>
 <li>String</li>
 </ul>
-<p>WP GraphQL is packaged with a variety of custom WordPress related GraphQL types which can be found in the <a href="https://github.com/wp-graphql/wp-graphql/tree/master/src/Type">Type folder</a>. You may want to browse through those files to see if one fits your needs before writing your own.</p>
+<p>WPGraphQL is packaged with a variety of custom WordPress related GraphQL types which can be found in the <a href="https://github.com/wp-graphql/wp-graphql/tree/master/src/Type">Type folder</a>. You may want to browse through those files to see if one fits your needs before writing your own.</p>
 <p>Additionally, WP Headless comes with a <code>MediaDetails</code> object type for image uploads you may also find useful.</p>
 <p>If those don't fit your use case, you can add your own type(s) with the <code>graphql-types.php</code> config file.</p>
-<p>Each configuration entry will ultimately be passed to WP GraphQL's <code>register_graphql_enum_type()</code>, <code>register_graphql_object_type()</code> or <code>register_graphql_union_type()</code> functions depending on the type so your configurations will be similar to how you would write them if you were working directly with those functions.</p>
-<p>Each of those functions take two parameters per the <a href="https://docs.wpgraphql.com/extending/types">WP GraphQL docs</a> - a <code>type_name</code> and a <code>config</code>.</p>
+<p>Each configuration entry will ultimately be passed to WPGraphQL's <code>register_graphql_enum_type()</code>, <code>register_graphql_object_type()</code> or <code>register_graphql_union_type()</code> functions depending on the type so your configurations will be similar to how you would write them if you were working directly with those functions.</p>
+<p>Each of those functions take two parameters per the <a href="https://docs.wpgraphql.com/extending/types">WPGraphQL docs</a> - a <code>type_name</code> and a <code>config</code>.</p>
 <p>Our configuration entries require three primary arguments, all of which correspond to those functions in some way.</p>
 <ul>
 <li><code>id</code> - A unique identifier for the type. Gets passed to the relevant function as the <code>type_name</code> parameter. Should be in PascalCase.</li>
-<li><code>type</code> - Determines which aforementioned function gets called. Must either be <code>object</code>, <code>enum</code> or <code>union</code> as of now, however WP GraphQL intends to support registering custom <code>scalar</code> and <code>interface</code> types in the future.</li>
+<li><code>type</code> - Determines which aforementioned function gets called. Must either be <code>object</code>, <code>enum</code> or <code>union</code> as of now, however WPGraphQL intends to support registering custom <code>scalar</code> and <code>interface</code> types in the future.</li>
 <li><code>args</code> - The configuration arguments for the type. Gets passed to the relevant function as the <code>config</code> parameter.</li>
 </ul>
-<p>Custom GraphQL type configurations can be written in a variety of ways depending on the type and what you are trying to achieve. We are going to use our <a href="https://github.com/sbarry50/wp-headless-movie-demo">Movie Demo plugin</a> as an example here, however it does not adequately cover all the ways GraphQL types can be registered. Please refer to the <a href="https://docs.wpgraphql.com/extending/types">WP GraphQL docs</a> for more details.</p>
+<p>Custom GraphQL type configurations can be written in a variety of ways depending on the type and what you are trying to achieve. We are going to use our <a href="https://github.com/sbarry50/wp-headless-movie-demo">Movie Demo plugin</a> as an example here, however it does not adequately cover all the ways GraphQL types can be registered. Please refer to the <a href="https://docs.wpgraphql.com/extending/types">WPGraphQL docs</a> for more details.</p>
 <h3>Movie Demo Examples</h3>
 <p>Our <a href="https://github.com/sbarry50/wp-headless-movie-demo">Movie Demo plugin</a> registers two custom GraphQL types - an enumumeration type and an object type.</p>
 <p>The object type includes the enum type so we will list the enum type first. It also happens to be the simpler of two as we are merely registering a <code>MovieRating</code> type with four possible values. Note that the <code>value</code> values must match the values that will be saved in the database.</p>

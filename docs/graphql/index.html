@@ -324,16 +324,16 @@
 
         <div class="w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
             <h2>GraphQL</h2>
-<p>WP Headless comes with GraphQL support out of the box when paired with <a href="https://www.wpgraphql.com/">WP GraphQL</a>. In fact, it's main purpose is to serve as a framework to more easily craft plugins that extend <a href="https://www.wpgraphql.com/">WP GraphQL</a> which we feel is ideal when using WordPress as a headless CMS.</p>
-<p>GraphQL is its own animal though and we do not intend to try to rewrite the docs on working with it here so we highly recommend reading the <a href="https://www.wpgraphql.com/docs/">WP GraphQL docs</a> and other GraphQL resources if you're new to it.</p>
+<p>WP Headless comes with GraphQL support out of the box when paired with <a href="https://www.wpgraphql.com/">WPGraphQL</a>. In fact, it's main purpose is to serve as a framework to more easily craft plugins that extend <a href="https://www.wpgraphql.com/">WPGraphQL</a> which we feel is ideal when using WordPress as a headless CMS.</p>
+<p>GraphQL is its own animal though and we do not intend to try to rewrite the docs on working with it here so we highly recommend reading the <a href="https://www.wpgraphql.com/docs/">WPGraphQL docs</a> and other GraphQL resources if you're new to it.</p>
 <p>Our intention here is to instruct you on how to properly work with it in the context of the WP Headless framework.</p>
 <h3>Hands off... mostly</h3>
-<p>Thanks to WP GraphQL, extended functionality such as <a href="/wp-headless-docs/docs/config-post-types">custom post types</a>, <a href="/wp-headless-docs/docs/config-taxonomies">taxonomies</a> and <a href="/wp-headless-docs/docs/config-settings">settings</a> of the <code>String</code> GraphQL type become queryable by merely registering them via WordPress' API's and passing a <code>show_in_graphql</code> parameter with its configuration.</p>
+<p>Thanks to WPGraphQL, extended functionality such as <a href="/wp-headless-docs/docs/config-post-types">custom post types</a>, <a href="/wp-headless-docs/docs/config-taxonomies">taxonomies</a> and <a href="/wp-headless-docs/docs/config-settings">settings</a> of the <code>String</code> GraphQL type become queryable by merely registering them via WordPress' API's and passing a <code>show_in_graphql</code> parameter with its configuration.</p>
 <p>WP Headless makes this even easier by allowing you to register these with <a href="/wp-headless-docs/docs/configuration-files">configuration files</a> and in the case of settings, the <code>show_in_graphql</code> parameter only needs to be passed if you don't want the setting to be queryable.</p>
 <pre><code class="language-php">    'args' =&gt; [
         'show_in_graphql' =&gt; false
     ]</code></pre>
-<p>The same goes for custom meta fields of the <code>String</code> type, however in this case we abstracted away WP GraphQL's API for registering the fields so all you need to do is create them with the <a href="/wp-headless-docs/docs/config-meta-fields">meta fields config file</a>. And like settings, these automatically become queryable unless you pass the <code>'show_in_graphql' =&gt; false</code> argument in a field's config entry.</p>
+<p>The same goes for custom meta fields of the <code>String</code> type, however in this case we abstracted away WPGraphQL's API for registering the fields so all you need to do is create them with the <a href="/wp-headless-docs/docs/config-meta-fields">meta fields config file</a>. And like settings, these automatically become queryable unless you pass the <code>'show_in_graphql' =&gt; false</code> argument in a field's config entry.</p>
 <h3>More Complex Cases</h3>
 <p>While creating a simple text input or dropdown list doesn't require any additional work on your part to make them queryable via GraphQL that is not always the case when you have more complex settings and meta fields in your plugin.</p>
 <p>These cases require a little more work to get them working with GraphQL, however WP Headless attempts to make that as easy as possible with the following steps.</p>
@@ -343,7 +343,7 @@
 <li><a href="/wp-headless-docs/docs/graphql-config-parameters">Configuration parameters</a></li>
 </ul>
 <h3>Querying with GraphQL</h3>
-<p>Querying the data from the custom functionality you create with WP Headless is no different than WP GraphQL. Please see <a href="https://docs.wpgraphql.com/">their docs</a> for information on querying.</p>        </div>
+<p>Querying the data from the custom functionality you create with WP Headless is no different than WPGraphQL. Please see <a href="https://docs.wpgraphql.com/">their docs</a> for information on querying.</p>        </div>
     </div>
 </section>
         </main>
